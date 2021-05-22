@@ -1,0 +1,194 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MBAR MENU
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Reset\tAlt+N",               IDM_FILE_NEW
+        MENUITEM "&Save...\tAlt+S",             IDM_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM "&About",                      IDM_FILE_ABOUT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tAlt+X",                IDM_FILE_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Copy\tCtrl+C",               IDM_EDIT_COPY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUT DIALOGEX 0, 0, 187, 61
+STYLE DS_SETFONT | DS_MODALFRAME | DS_SETFOREGROUND | DS_3DLOOK | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About Landscape"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,130,40,50,14
+    LTEXT           "Mandelbrot Explorer",IDC_STATIC,44,7,136,8
+    LTEXT           "Copyright © 2016-2021, Mike Marcelais",IDC_STATIC,44,23,136,8
+    ICON            IDI_FRACTAL,IDC_STATIC,7,7,21,20,SS_REALSIZEIMAGE
+END
+
+IDD_PROG DIALOGEX 0, 0, 187, 47
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Generating Movie..."
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "Progress1",IDC_PROGBAR,"msctls_progress32",PBS_SMOOTH | WS_BORDER,7,7,173,12
+    PUSHBUTTON      "Cancel",IDCANCEL,130,26,50,14
+    LTEXT           "",IDC_PROGTEXT,7,31,114,9
+END
+
+IDD_GETSEED DIALOGEX 0, 0, 156, 47
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Create Movie..."
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,97,26,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,31,26,50,14
+    LTEXT           "Movie Duration (seconds):",IDC_STATIC,7,7,102,9
+    EDITTEXT        IDC_EDIT,117,7,32,14,ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_STATUSPANE DIALOGEX 0, 0, 254, 101
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Fractal Parameters"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Center",IDC_STATIC,7,9,21,8
+    EDITTEXT        IDC_CENTER_X,49,7,90,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "+",IDC_STATIC,141,9,8,8
+    EDITTEXT        IDC_CENTER_Y,148,7,90,12,ES_RIGHT | ES_AUTOHSCROLL
+    LTEXT           "i",IDC_STATIC,242,9,8,8
+    LTEXT           "Scale",IDC_STATIC,7,26,21,8
+    EDITTEXT        IDC_SCALE,49,24,90,12,ES_RIGHT | ES_AUTOHSCROLL
+    CONTROL         "Julia Set",IDC_JULIA,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,6,42,42,10
+    EDITTEXT        IDC_JULIA_X,49,41,90,12,ES_RIGHT | ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "+",IDC_STATIC,141,43,8,8
+    EDITTEXT        IDC_JULIA_Y,148,41,90,12,ES_RIGHT | ES_AUTOHSCROLL | WS_DISABLED
+    LTEXT           "i",IDC_STATIC,242,43,8,8
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ | WS_GROUP,5,60,244,2
+    LTEXT           "Cursor",IDC_STATIC,7,67,21,8
+    EDITTEXT        IDC_CURSOR_X,49,65,90,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "+",IDC_STATIC,141,67,8,8
+    EDITTEXT        IDC_CURSOR_Y,148,65,90,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "i",IDC_STATIC,242,67,8,8
+    LTEXT           "Iterations",IDC_STATIC,7,84,31,8
+    EDITTEXT        IDC_MAXITER,49,82,90,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    LTEXT           "Left",IDC_STATIC,148,84,20,8
+    EDITTEXT        IDC_UNRESOLVED,168,82,70,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 54
+    END
+
+    IDD_PROG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 180
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_GETSEED, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 149
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 40
+    END
+
+    IDD_STATUSPANE, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 247
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 94
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
