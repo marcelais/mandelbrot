@@ -1,6 +1,6 @@
 # mandelbrot
 Mandelbrot and Julia set explorer
-
+[Download the app here.](https://github.com/shaped1/mandelbrot/blob/main/mbrot.exe?raw=true)
 This is a fractal generator for Mandelbrot and Julia sets.
 
 Click and drag a rectangle to zoom in.
