@@ -17,3 +17,5 @@ Saving an animated movie requires a VFW-compatible AVI codec installed.  The mov
 The program uses background threading and parallel computation to determine points inside or outside the set.  Points which escape are colored via a pallete.  Points which are proven to be bound (because they cycle) are colored black.  Points in grey have yet to be determined.  You can see the current iteration depth and the number of currently unresolved pixels in the status window.
 
 You need not wait for the computation to finish before selecting a new action.
+
+A pre-compiled x64 binary exists in the bin folder.
